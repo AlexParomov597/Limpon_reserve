@@ -1,0 +1,162 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+$light-blue:    #7581a1;
+$bg-blue:       #1085e4;
+$item-blue:     #6e7ea9;
+$header-blue:   #192b59;
+$accent-color:  #192b59;
+$btn-s:         #7e8bae;
+$btn-bg-s:      #cbdbe8;
+$max-width:     1920px;
+
+
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: left;
+    color: $light-blue;
+    font-size: 16px;
+    line-height: 26px;  /* Межстрочный интервал */
+}
+.wrap{
+    max-width:     $max-width;
+    margin: 0px auto; /* по центру */
+}
+.btn{
+    text-decoration: none; /* Убрать подчеркивание */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 10px 10px;
+    padding: 20px 50px;
+    border-radius: 50px;
+    border: 1px solid $bg-blue;
+    transition: 0.3s; // Добавляем плавность
+    &-group{
+        margin-left: 15px;
+    }
+    &-primary{
+        color: white;
+        background-color: $bg-blue;
+    &:hover{
+            background-color: white;
+            color: $bg-blue;
+            }
+        }
+    &-secondary{
+        color: $btn-s;
+        background-color: $btn-bg-s;
+        &:hover{
+            color: $btn-bg-s;
+            background-color: $btn-s;
+            }
+        }
+}
+.page-header{
+    background-image: url(../img/bg/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* что бы он растягивался на всю ширину*/
+    &_group{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        &__title{
+            margin: auto 50px;
+            padding:0px auto;
+            &-font{
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: -0.5px;
+                font-size: 80px;
+                line-height: 1.2;
+                font-weight: 600;
+                color: $header-blue;
+                margin-bottom: 40px;
+                margin-left: 20px;   
+            }
+        }
+    }     
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // max-width: $max-width*0.8;
+    width: 90%;
+    margin: 0px auto; /* по центру */
+    padding: 45px 20px 10px 20px;
+    &__logo{
+        display: block;
+        width: 181px;
+        height: 49px;
+        background-image: url(../img/logo.png);
+    }
+    &-list{
+        list-style-type: none; /* Убрать маркеры списка */
+        display: flex;
+        justify-content: flex-end;
+        font-family: 'Open Sans', sans-serif;
+        padding-right: 10px;
+        &__item{
+            // margin-left: 22px;
+            margin: 0px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            border-bottom: 5px solid transparent; // Добавляем плавность
+            transition: 0.3s;
+            &:hover{ // Псевдо класс при наведении курсора
+                border-bottom: 5px solid $bg-blue;
+            }
+            &.active{
+                border-bottom: 5px solid $bg-blue;
+            }
+        }
+        &__link{
+            color: $item-blue;
+            text-decoration: none; /* Убрать подчеркивание */
+            letter-spacing: 1.5px;
+        }
+    }
+}
+
+/* h1{
+    font-size: 80px;
+    font-weight: 600;
+    color: $header-blue;
+}
+.nav{
+    font-size: 12px;
+    font-weight: 700;
+    color: $item-blue;
+    text-transform: uppercase;
+}
+.grid h2{
+    font-size: 40px;
+    color: $header-blue;
+    font-weight: 700;
+}
+.grid h2 span{
+    font-size: 14px;
+    color: $bg-blue;
+    display: block; // Чтобы с новой строки 
+}
+.grid-item h3{
+    font-size: 20px;
+    color: $header-blue;
+    font-weight: 600;
+}
+.grid-item a{
+    font-size: 14px;
+    color: $bg-blue;
+    font-weight: 600;
+} */
