@@ -62,9 +62,55 @@ body{
         }
 }
 .page-company{
-    // background-image: url(../img/bg/bg-company.png);
-    // background-repeat: no-repeat;
-    // background-size: cover; /* что бы он растягивался на всю ширину*/
+    background-image: url(../img/bg/bg-company.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* что бы он растягивался на всю ширину*/
+    &_list{
+        list-style-type: none; /* Убрать маркеры списка */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        &__item{
+            display: block;
+            margin:  80px 0 80px;
+            &-one{
+                background-image: url(../img/company-1.png);
+                background-repeat: no-repeat;
+                flex-basis: 202px;
+                height: 61px;
+            }
+            &-two{
+                background-image: url(../img/company-2.png);
+                background-repeat: no-repeat;
+                flex-basis: 201px;
+                height: 71px;
+                }
+            &-three{
+                background-image: url(../img/company-3.png);
+                background-repeat: no-repeat;
+                flex-basis: 204px;
+                height: 50px;
+                }
+            &-four{
+                background-image: url(../img/company-4.png);
+                background-repeat: no-repeat;
+                flex-basis: 203px;
+                height: 76px;
+                }
+            }
+    }
+}
+.page-suscribe{
+    background: rgba(10,32,144,1);
+    background: -moz-linear-gradient(-30deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,32,144,1)), color-stop(100%, rgba(35,120,205,1)));
+    background: -webkit-linear-gradient(-30deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: -o-linear-gradient(-30deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: -ms-linear-gradient(-30deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: linear-gradient(150deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
 }
 .page-header{
     background-image: url(../img/bg/bg.png);
@@ -74,6 +120,13 @@ body{
         display: flex;
         justify-content: space-between;
         margin-top: 40px;
+        &__img{
+            display: block;
+            background-image: url(../img/header-screen.png);
+            background-repeat: no-repeat;
+            width: 895px;
+            height: 740px;
+        }
         &__title{
             margin: auto 50px;
             padding:0px auto;
@@ -97,7 +150,7 @@ body{
     // max-width: $max-width*0.8;
     width: 90%;
     margin: 0px auto; /* по центру */
-    padding: 45px 20px 10px 20px;
+    padding: 55px 20px 10px 20px;
     &__logo{
         display: block;
         width: 181px;
