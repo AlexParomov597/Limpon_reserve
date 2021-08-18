@@ -68,7 +68,7 @@ body{
     &_list{
         list-style-type: none; /* Убрать маркеры списка */
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         margin: 0;
         padding: 0;
@@ -103,6 +103,7 @@ body{
     }
 }
 .page-suscribe{
+    padding: 25px;
     background: rgba(10,32,144,1);
     background: -moz-linear-gradient(-30deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,32,144,1)), color-stop(100%, rgba(35,120,205,1)));
@@ -111,6 +112,182 @@ body{
     background: -ms-linear-gradient(-30deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: linear-gradient(150deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
+    &_group{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__title{
+            margin: 120px 20px;
+            padding:0px auto;
+            flex-basis: 45%;
+            h2{
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: -0.5px;
+                font-size: 55px;
+                line-height: 1.2;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 30px;
+                margin-left: 20px;
+                span{
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 3.5px;
+                } 
+            }
+            p{
+                display: block;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 1.5px;
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: white;
+                margin-bottom: 30px;
+                margin-left: 20px;
+
+            }
+        }
+        &__box{
+            position: relative;
+            input{
+                border:2px solid #3f5cb1;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 1.5px;
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: white;
+                border-radius: 50px;
+                background-color: transparent;  // убрать фон
+                padding: 34px 220px 34px 36px;  // 220 ограничить поле ввода под второй кнопкой
+                display: block;
+                width: 100%;
+                box-sizing: border-box;         // чтобы  размер не превышал
+                box-shadow: 10px 10px 10px rgba(10,32,144,1);
+                &:focus{
+                    outline: none;              // убрать рамку при введении email
+                }
+                &::-webkit-input-placeholder {color:#b1c3ee;}
+                &::-moz-placeholder          {color:#b1c3ee;}/* Firefox 19+ */
+                &:-moz-placeholder           {color:#b1c3ee;}/* Firefox 18- */
+                &:-ms-input-placeholder      {color:#b1c3ee;}    
+            }
+            a{
+               position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+        }
+        &__img{
+            display: block;
+            flex-basis: 397px;
+            height: 468px;
+            background-image: url(../img/robot.png);
+            background-repeat: no-repeat;
+            margin: 30px 80px;
+            }
+    }
+}
+.grid{
+    display: grid;
+    grid-template-areas:    "a b c"
+                            "d b c"
+                            "d f g"
+                            "e f g"
+                            "e h h";
+    &-item{
+        text-align: center;
+        box-shadow: 6px 4px 11px 2px #bda8a8;;
+        margin: 10px 10px;
+        padding: 10px 10px;
+        h3{
+            font-size: 20px;
+            font-style: 600;
+            color: #192b59;
+            margin-bottom: 18px;
+        }
+        a{
+            font-size: 14px;
+            font-style: 600;
+            color: #1085e4;
+        }
+        &-title{
+            grid-area: a;
+        }
+        &_1{
+            grid-area: b;
+        }
+        &_2{
+            grid-area: c;
+        }
+        &_3{
+            grid-area: d;
+        }
+        &_4{
+            grid-area: e;
+        }
+        &_5{
+            grid-area: f;
+        }
+        &_6{
+            grid-area: g;
+        }
+        &_text{
+            grid-area: h;
+            padding: 10px 20px;
+        }
+        &_icon{
+            background-repeat: no-repeat;
+            display: block;
+            margin: 0 auto 36px;
+            &__1{
+                background-image: url(../img/icon/icon1.png);
+                width: 79px;
+                height: 82px;
+            }
+            &__2{
+                background-image: url(../img/icon/icon2.png);
+                width: 73px;
+                height: 79px;
+            }
+            &__3{
+                background-image: url(../img/icon/icon3.png);
+                width: 89px;
+                height: 85px;
+            }
+            &__4{
+                background-image: url(../img/icon/icon4.png);
+                width: 103px;
+                height: 92px;
+            }
+            &__5{
+                background-image: url(../img/icon/icon5.png);
+                width: 85px;
+                height: 90px;
+            }
+            &__6{
+                background-image: url(../img/icon/icon6.png);
+                width: 100px;
+                height: 87px;
+            }
+        }
+    }
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color: #192b59;
+        margin: 20px 20px;
+        span{   
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+        } 
+    }
 }
 .page-header{
     background-image: url(../img/bg/bg.png);
@@ -130,7 +307,7 @@ body{
         &__title{
             margin: auto 50px;
             padding:0px auto;
-            &-font{
+            h1{
                 font-family: 'Open Sans', sans-serif;
                 letter-spacing: -0.5px;
                 font-size: 80px;
@@ -148,7 +325,7 @@ body{
     justify-content: space-between;
     align-items: center;
     // max-width: $max-width*0.8;
-    width: 90%;
+    width: 80%;
     margin: 0px auto; /* по центру */
     padding: 55px 20px 10px 20px;
     &__logo{
